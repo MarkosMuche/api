@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-ud@8ua%hg!5!7q(znd^ls^bm&@2&6!5my9di-t2a5cnbw0=@nb
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'heart-disease-detecter.herokuapp.com'
+    'heart-disease-detecter.herokuapp.com',
+    '*'
 ]
 
 
