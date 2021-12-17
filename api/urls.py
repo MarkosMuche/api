@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
-from predictor.views import PredictionAPIView
+from predictor.views import index_view
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('predictor.urls'))
+    path('', index_view, name='index'),
+    path('api/', include('predictor.urls')),
 ]
