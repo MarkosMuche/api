@@ -21,3 +21,4 @@ class HeartDataForm(forms.Form):
     Depression_level = forms.IntegerField()
     Slope_of_blood_cell = forms.IntegerField()
     Number_of_vessels = forms.IntegerField()
+    maximum_heart_rate_achieved = forms.IntegerField()
