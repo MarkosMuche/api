@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html"%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result of your prediction</title>
-</head>
+{% block content%}
 
-<body>
-    {% if 1 in result %}
-    <h1>
-        Your result shows you have a heart disease.
-    </h1>
-    {%else%}
-    <h1>
-        congrats! you are free from heart disease
-    </h1>
-    {%endif%}
-</body>
+{% if 1 in result %}
+<h1>
+    Your result shows you have a heart disease.
+</h1>
+{%else%}
+<h1>
+    congrats! you are free from heart disease
+</h1>
+{%endif%}
 
-</html>
+{% endblock content%}

@@ -1,35 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html'%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My API</title>
-</head>
+{% block content%}
+<form action="{% url 'predict'%}" method="POST">
 
-<body>
+    {% csrf_token %}
 
-    <h1>This is my thing</h1>
+    <ul>
+        {{form.as_p }}
+    </ul>
+    <div id="predict">
+        <button>Submit</button>
+    </div>
+</form>
 
-    <article>
-
-        <section>
-            <form action="{% url 'predict'%}" method="POST">
-
-                {% csrf_token %}
-
-                <ul>
-                    {{form.as_p }}
-                </ul>
-                <div id="predict">
-                    <button>Submit</button>
-                </div>
-            </form>
-        </section>
-
-    </article>
-
-</body>
-
-</html>
+{% endblock%}
