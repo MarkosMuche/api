@@ -53,4 +53,4 @@ class PredictionAPIView(APIView):
         else:
             print('not valid')
 
-        return HttpResponse(result)
+        return render(request, 'predictor/result.html', context={'result': result})
