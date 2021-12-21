@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+
+{% block content%}
+<div class="container">
+
+    This app Detects your heart disease if you give it the apropriate information in the form at the follwing link.
+
+</div>
+
+
+<a href="{% url 'predict'%}">
+    Form Link
+</a>
+
+{%endblock content%}
