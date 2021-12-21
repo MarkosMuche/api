@@ -9,11 +9,6 @@ from rest_framework.views import APIView
 from .forms import HeartDataForm
 
 
-def index_view(request):
-
-    return render(request, 'index.html')
-
-
 class PredictionAPIView(APIView):
 
     def get(self, request):
