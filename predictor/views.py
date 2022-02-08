@@ -1,8 +1,6 @@
 from pickle import load
 from django.shortcuts import render, HttpResponse
 import numpy as np
-from .apps import loaded_model
-
 from rest_framework import generics
 from rest_framework.views import APIView
 
