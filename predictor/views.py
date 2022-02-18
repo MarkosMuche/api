@@ -1,9 +1,10 @@
-from pickle import load
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+
+
 import numpy as np
-from rest_framework import generics
 from rest_framework.views import APIView
 
+from .apps import loaded_model
 from .forms import HeartDataForm
 
 
