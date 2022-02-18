@@ -1,5 +1,5 @@
 
 
 
-web: gunicorn api.wsgi
+web: gunicorn web.wsgi
 
