@@ -7,12 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-utilities.min.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'hd.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'https://fonts.googleapis.com/css?family=Raleway' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'https://www.w3schools.com/lib/w3-colors-ios.css' %}">
+
 </head>
 
 <body>
+<<<<<<< Updated upstream
 
   <nav class="fixed-top nav collapsible">
     <a class="nav__brand" href="#"><img src="{% static 'image/logo1.png' %}" alt="" /></a>
@@ -66,182 +69,545 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
+=======
+          <!-- Navbar (sit on top) -->
+          <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+              <a href="{% url 'index'%}" class="fa fa-ma w3-bar-item w3-button w3-wide">Mark</a>
+              <!-- Right-sided navbar links -->
+              <div class="w3-right w3-hide-small">
+                <div class="w3-dropdown-click">
+          
+                  <button onclick="myFunction()" class="w3-button">ABOUT</button>
+                  <div id="Demo" class="w3-dropdown-content w3-bar-block w3-animate-zoom">
+                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                  </div>
+                </div>
+                <a href="{% url 'index'%}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+                <a href="{% url 'predict'%}" class="w3-bar-item w3-button"><i class="fa fa-"></i>BLOG</a>
+                <a href="{% url 'aboutme'%}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+              </div>
+              <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+          
+              <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+>>>>>>> Stashed changes
           </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+ 
+  {% block content%}
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+  style="display: none;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+
+
+  <div class="w3-dropdown-click">
+
+    <button onclick="mmyFunction()" class="w3-button">ABOUT</button>
+    <div id="DDemo" class="w3-dropdown-content w3-bar-block w3-animate-zoom">
+      <a href="#" class="ww3-bar-item w3-button">Link 1</a>
+      <a href="#" class="ww3-bar-item w3-button">Link 2</a>
+      <a href="#" class="ww3-bar-item w3-button">Link 3</a>
     </div>
-    <div class="card testimonial">
-      <div class="grid grid--1x2">
-        <div class="testimonial__image">
-          <img src="{% static 'image/Screenshot from 2022-02-07 14-39-00.png' %}" alt="A happy, smiling customer" />
-        </div>
-        <div>
-
-          <h2 class="testimo">Frequently ask</h2>
-          <li class="asked">Helping people who have had a stroke</li>
-          <li class="asked">Preventing heart problems</li>
-          <li class="asked">Detecting atrial fibrillation (a-fib) sooner</li>
-        </div>
+  </div>
 
 
-        <footer>
-          <div class="media">
-            <div class="media__image">
-              <svg class="icon icon--primary quote__line">
-                <use xlink:href="images/sprite.svg#line"></use>
-              </svg>
+
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+          <!-- Header with full-height image -->
+          <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+            <div class="w3-display-left w3-text-white" style="padding:48px">
+              <span class="w3-jumbo w3-hide-small">Hello I'm Markos Amsalu</span><br>
+              <span class="w3-xxlarge w3-hide-large w3-hide-medium">Hello I'm Markos Amsalu</span><br>
+              <span class="w3-large">I’m a backend developer in icoglab AI engineer and content creator based in the
+                Ethiopia.</span>
+              <p><a href="#about"
+                  class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more
+                  and start today</a></p>
+            </div>
+            <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+              <i></i>
+              <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/mesfin.gedlu.33/"
+                target="_blank"></a>
+              <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/mesfin_gedlu/" target="_blank"></a>
+              <a class="fa fa-twitter w3-hover-opacity" href="https://twitter.com/MGedlu" target="_blank"></a>
+              <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/mesfin1023ab/" target="_blank"></a>
+            </div>
+          </header>
+          
+          <!-- About Section -->
+          <div class="w3-container" style="padding:128px 16px" id="about">
+            <h3 class="w3-center">ABOUT THE PROJECT</h3>
+            <p class="w3-center w3-large">Cardiovascular Diseases and Artificial Intelligence</p>
+            <div class="w3-row-padding w3-center" style="margin-top:64px">
+              <div class="w3-quarter">
+                <i class="fa fa-stethoscope w3-margin-bottom w3-jumbo w3-center"></i>
+                <p class="w3-large">Responsive</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </div>
+              <div class="w3-quarter">
+                <i class="fa fa-thermometer w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Passion</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </div>
+              <div class="w3-quarter">
+                <i class="fa fa-user w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Users</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </div>
+              <div class="w3-quarter">
+                <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Support</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </div>
             </div>
           </div>
-        </footer>
-      </div>
-    </div>
-    <section class="section">
-      <div class="container">
-
-        <div class="section_header">
-          <h2 class="title section_title">Expert Team<span></span></h2>
-          <span class="section_hint">web design & Development</span>
-        </div>
-        <div class="row">
-          <div class="section_content teamy-team">
-            <div class="col-md-3">
-              <div class="teamy teamy_style1 teamy_mask-circle">
-                <div class="teamy_layout">
-                  <div class="teamy_preview"> <img src="{% static 'image/re.png' %}" class="teamy_avatar"
-                      alt="The demo photo"> </div>
-                  <div class="teamy_back">
-                    <div class="teamy_back-inner"> <a href="#0" class="social"> <i class="fa fa-facebook"></i> </a> <a
-                        href="#0" class="social"> <i class="fa fa-dribbble"></i> </a> <a href="#0" class="social"> <i
-                          class="fa fa-twitter"></i> </a> <a href="#0" class="social"> <i class="fa fa-envelope-o"></i>
-                      </a> </div>
-                  </div>
-                </div>
-                <div class="teamy_content">
-                  <h3 class="teamy_name">Markos Amsalu</h3>
-                  <span class="teamy_post">CEO/Founder</span>
-                </div>
+          
+          <!-- Promo Section - "We know design" -->
+          <div class="w3-container w3-light-grey" style="padding:128px 16px">
+            <div class="w3-row-padding">
+              <div class="w3-col m6">
+                <h3>Caediovascular Diseases.</h3>
+                <p>Cardiovascular diseases (CVD) is a major threat to human health and the leading cause of death worldwide. The
+                  incidence of CVD caused 17.6 million deaths in 2016, an increase of 14.5% from 2006 to 2016. Unfortunately, the
+                  mortality and morbidity rates of CVD are increasing year by year, especially in developing regions. Studies have
+                  shown that approximately 80% of CVD-related deaths occur in low- and middle-income countries. Besides, these
+                  deaths occur at a younger age than in high-income countries.</p>
+                <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th">&nbsp;</i> View My Works</a></p>
+              </div>
+              <div class="w3-col m6">
+                <img class="w3-image w3-round-large" src="{% static 'images/Screenshot from 2022-02-07 14-39-00.png' %}" alt="Buildings" width="700"
+                  height="394">
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="teamy teamy_style1 teamy_mask-circle">
-                <div class="teamy_layout">
-                  <div class="teamy_preview"> <img src="{% static 'image/re.png' %}" alt="The demo photo">
-
-                  </div>
-                  <div class="teamy_back">
-                    <div class="teamy_back-inner"> <a href="#0" class="social"> <i class="fa fa-facebook"></i> </a> <a
-                        href="#0" class="social"> <i class="fa fa-dribbble"></i> </a> <a href="#0" class="social"> <i
-                          class="fa fa-twitter"></i> </a> <a href="#0" class="social"> <i class="fa fa-envelope-o"></i>
-                      </a> </div>
-                  </div>
-                </div>
-                <div class="teamy_content">
-                  <h3 class="teamy_name">Dora Caelan</h3>
-                  <span class="teamy_post">Product Manager</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="teamy teamy_style1 teamy_mask-circle">
-                <div class="teamy_layout">
-                  <div class="teamy_preview"> <img src="{% static 'image/re.png' %}" class="teamy_avatar"
-                      alt="The demo photo"> </div>
-                  <div class="teamy_back">
-                    <div class="teamy_back-inner"> <a href="#0" class="social"> <i class="fa fa-facebook"></i> </a> <a
-                        href="#0" class="social"> <i class="fa fa-dribbble"></i> </a> <a href="#0" class="social"> <i
-                          class="fa fa-twitter"></i> </a> <a href="#0" class="social"> <i class="fa fa-envelope-o"></i>
-                      </a> </div>
-                  </div>
-                </div>
-                <div class="teamy_content">
-                  <h3 class="teamy_name">Mesfin Gedlu</h3>
-                  <span class="teamy_post">Wordpress Manager</span>
-                </div>
-              </div>
-            </div>
-
           </div>
-        </div>
-      </div>
-      </div>
+          <section class="ftco-section===">
+            <div class="container">
+              <div class="row justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate fadeInUp ftco-animated">
+                  <span href class="subheading">News &amp; Blog</span>
+                  <h2>Latest news from my blog</h2>
+                </div>
+              </div>
+              <div class="row d-flex">
+                <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+                  <div class="blog-entry align-self-stretch">
+                    <a href="blog-single.html" class="block-20 rounded"
+                      style="background-image:url(images/covid-vaccine-1624434256.jpg)">
+                    </a>
+                    <div class="text mt-3">
+                      <div class="posted mb-3 d-flex">
+                        <div class="img author" style="background-image:url(images/P_20160419_015644_1_BF_p.jpg)"></div>
+                        <div class="desc pl-3">
+                          <span>Posted by Mesfin Gedlu</span>
+                          <span>24 February 2020</span>
+                        </div>
+                      </div>
+                      <h3 class="heading"><a href="#">Best wheel alignment &amp; air conditioning</a></h3>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+                  <div class="blog-entry align-self-stretch">
+                    <a href="blog-single.html" class="block-20 rounded" style="background-image:url(images/best-cough.jpg)">
+                    </a>
+                    <div class="text mt-3">
+                      <div class="posted mb-3 d-flex">
+                        <div class="img author" style="background-image:url(images/P_20160419_015644_1_BF_p.jpg)"></div>
+                        <div class="desc pl-3">
+                          <span>Posted by Mesfin Gedlu</span>
+                          <span>24 February 2020</span>
+                        </div>
+                      </div>
+                      <h3 class="heading"><a href="#">Best wheel alignment &amp; air conditioning</a></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+                  <div class="blog-entry align-self-stretch">
+                    <a href="blog-single.html" class="block-20 rounded"
+                      style="background-image: url('images/hay-fever-cough-1625815314.jpg');">
+                    </a>
+                    <div class="text mt-3">
+                      <div class="posted mb-3 d-flex">
+                        <div class="img author" style="background-image:url(images/P_20160419_015644_1_BF_p.jpg)"></div>
+                        <div class="desc pl-3">
+                          <span>Posted by Mesfin Gedlu</span>
+                          <span>24 February 2020</span>
+                        </div>
+                      </div>
+                      <h3 class="heading"><a href="#">Best wheel alignment &amp; air conditioning</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="site-section" id="agents-section">
+            <div class="container">
+              <div class="row mb-5">
+                <div class="col-md-7 text-left">
+                  <h2 class="section-title mb-3">THE TEAM</h2>
+                  <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque tempora reiciendis.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="team-member">
+                    <figure>
+                      <ul class="social">
+                        <li><a href="https://www.facebook.com/mesfin.gedlu.33/" target="_blank"><span
+                              class="fa fa-facebook"></span></a></li>
+                        <li><a href="https://twitter.com/MGedlu" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/mesfin1023ab/" target="_blank"><span
+                              class="fa fa-linkedin"></span></a></li>
+                        <li><a href="https://www.instagram.com/mesfin_gedlu/" target="_blank"><span
+                              class="fa fa-instagram"></span></a></li>
+                      </ul>
+                      <img src="{% static 'images/abi.png' %}" alt="Image" class="img-fluid" data-pagespeed-url-hash="2941781182"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </figure>
+                    <div class="p-3 bg-primary">
+                      <h3 class="mb-2">Mesfin Gedlu</h3>
+                      <span class="position">Front end devloper</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="team-member">
+                    <figure>
+                      <ul class="social">
+                        <li><a href="https://www.facebook.com/mesfin.gedlu.33/" target="_blank"><span
+                              class="fa fa-facebook"></span></a></li>
+                        <li><a href="https://twitter.com/MGedlu" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/mesfin1023ab/" target="_blank"><span
+                              class="fa fa-linkedin"></span></a></li>
+                        <li><a href="https://www.instagram.com/mesfin_gedlu/" target="_blank"><span
+                              class="fa fa-instagram"></span></a></li>
+                      </ul>
+                      <img src="{% static 'images/abi.png' %}" alt="Image" class="img-fluid" data-pagespeed-url-hash="3236281103"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </figure>
+                    <div class="p-3 bg-primary">
+                      <h3 class="mb-2">Markos Amsalu</h3>
+                      <span class="position">Back End</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="team-member">
+                    <figure>
+                      <ul class="social">
+                        <li><a href="https://www.facebook.com/mesfin.gedlu.33/" target="_blank"><span
+                              class="fa fa-facebook"></span></a></li>
+                        <li><a href="https://twitter.com/MGedlu" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/mesfin1023ab/" target="_blank"><span
+                              class="fa fa-linkedin"></span></a></li>
+                        <li><a href="https://www.instagram.com/mesfin_gedlu/" target="_blank"><span
+                              class="fa fa-instagram"></span></a></li>
+                      </ul>
+                      <img src="{% static 'images/abi.png' %}" alt="Image" class="img-fluid" data-pagespeed-url-hash="3530781024"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </figure>
+                    <div class="p-3 bg-primary">
+                      <h3 class="mb-2">UI</h3>
+                      <span class="position">Design</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Promo Section "Statistics" -->
+          <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+            <div class="w3-quarter">
+              <span class="w3-xxlarge">14+</span>
+              <br>Partners
+            </div>
+            <div class="w3-quarter">
+              <span class="w3-xxlarge">55+</span>
+              <br>Projects Done
+            </div>
+            <div class="w3-quarter">
+              <span class="w3-xxlarge">89+</span>
+              <br>Happy Clients
+            </div>
+            <div class="w3-quarter">
+              <span class="w3-xxlarge">150+</span>
+              <br>Meetings
+            </div>
+          </div>
+          
+          <!-- Work Section -->
+          <div class="w3-container" style="padding:128px 16px" id="work">
+            <h3 class="w3-center">SOME OF MY LATEST WORK</h3>
+            <p class="w3-center w3-large">What I've done</p>
+          
+            <div class="w3-row-padding" style="margin-top:64px">
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_mic.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+              </div>
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_phone.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+              </div>
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_drone.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+              </div>
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_sound.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+              </div>
+            </div>
+          
+            <div class="w3-row-padding w3-section">
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_tablet.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+              </div>
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_camera.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+              </div>
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_typewriter.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                  alt="A typewriter">
+              </div>
+              <div class="w3-col l3 m6">
+                <img src="{% static 'images/tech_tableturner.jpg' %}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                  alt="A tableturner">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Modal for full size images on click-->
+          <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+            <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+              <img id="img01" class="w3-image">
+              <p id="caption" class="w3-opacity w3-large"></p>
+            </div>
+          </div>
+          
+          <!-- Skills Section -->
+          <div class="w3-container w3-light-grey w3-padding-64">
+            <div class="w3-row-padding">
+              <div class="w3-col m6">
+                <h3>My Skills.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+                  tempor incididunt ut labore et dolore.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+                  tempor incididunt ut labore et dolore.</p>
+              </div>
+              <div class="w3-col m6">
+                <p class="w3-wide"><i class="fa fa-html5 w3-margin-right"></i>Artificial Intelligence</p>
+                <div class="w3-grey">
+                  <div class="w3-container w3-dark-grey w3-center" style="width:74%">74%</div>
+                </div>
+                <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
+                <div class="w3-grey">
+                  <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+                </div>
+          
+                <p class="w3-wide"><i class="fa fa-language w3-margin-right"></i>Pyton</p>
+                <div class="w3-grey">
+                  <div class="w3-container w3-dark-grey w3-center" style="width:92%">92%</div>
+                </div>
+                <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+                <div class="w3-grey">
+                  <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pricing Section -->
+          <div class="bodyy w3-cente w3-dark-grey" style="padding:100px 100px" id="pricing">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur nihil voluptatibus cumque at et odio soluta fugit
+              iure quam temporibus earum, eaque eos? Doloribus soluta est odio ipsa dolorem nam aspernatur expedita quos ab optio
+              ipsum eum, dicta tenetur libero maiores vel nesciunt labore? Et voluptas ipsa nisi vitae qui aperiam voluptatum vel
+              obcaecati id facere asperiores, quaerat totam dolorem provident dolor, maiores est! Molestias exercitationem
+              voluptate soluta tempore neque, aperiam eum minima totam alias deserunt in eveniet animi laborum ad numquam
+              temporibus velit voluptas, voluptates ut vitae. Quos velit asperiores repellendus nemo maiores voluptates nobis
+              itaque. Inventore, consequatur. Soluta dicta at dolore rerum suscipit non ipsa eaque cumque, praesentium reiciendis?
+              Quaerat vitae necessitatibus libero ab, quasi dolorum laborum dignissimos earum voluptatem facilis voluptas sunt
+              quos laboriosam tempore mollitia illum debitis in praesentium aut, perspiciatis ipsam deleniti. Beatae libero odit
+              animi voluptates itaque minima accusantium consectetur voluptas, natus sint quos nulla molestiae porro rerum iure
+              nisi perferendis incidunt nemo ex error dicta expedita aut! Numquam, dolorum odit! Ipsam sint eos officia a at
+              numquam minus dolore alias, fuga distinctio voluptate facere doloribus temporibus dolorem earum assumenda itaque
+              quod non odit maxime, et, impedit consectetur quaerat. Veniam necessitatibus enim eos. Laborum!</p>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+            <h3 class="w3-center">CONTACT</h3>
+            <p class="w3-center w3-large">Lets get in touch. Send a message:</p>
+            <div style="margin-top:48px">
+              <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Addis Ababa, ETHIOPIA</p>
+              <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +251 918814821</p>
+              <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +251 943542767</p>
+              <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mesfingedlu506@mail.com</p>
+              <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right emails"> </i> Email: markosamsalu@mail.com</p>
+              <a class="email" href="Mesfin: mesfingedlu506@gmail.com" target="_blank">Send Email</a>
+          
+              <br>
+              <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder="Name" required="" name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Email" required="" name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Subject" required="" name="Subject"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Message" required="" name="Message"></p>
+                <p>
+                  <button class="w3-button w3-black" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                  </button>
+                </p>
+              </form>
+            </div>
+          </div>
+  {% endblock content%}
+  <footer>
+<!-- Footer -->
+<footer class="block w3-black footer">
+  <div class="container grid footer__sections">
+    <section class="collapsible collapsible--expanded footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Products</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="#">Website Hosting</a></li>
+          <li><a href="#">Free Automated Wordpress</a></li>
+          <li><a href="#">Migrations</a></li>
+        </ul>
       </div>
     </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Company</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Affiliates</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Support</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Knowledge Base</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Domains</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="#">Domain Checker</a></li>
+          <li><a href="#">Domain Transfer</a></li>
+          <li><a href="#">Free Domain</a></li>
+        </ul>
+      </div>
+    </section>
+<<<<<<< Updated upstream
   </header>
   {% endblock content%}
 </div>
   <footer>
+=======
+>>>>>>> Stashed changes
 
-    <body>
+  </div>
 
-      <footer class="block block--dark footer">
-        <div class="container grid footer__sections">
-          <section class="collapsible collapsible--expanded footer__section">
-            <header class="collapsible__header">
-              <h2 class="collapsible__heading footer__heading">Products</h2>
-              <svg class="icon icon--white collapsible__chevron">
-                <use xlink:href="images/sprite.svg#chevron"></use>
-              </svg>
-            </header>
-            <div class="collapsible__content">
-              <ul class="list">
-                <li><a href="#">Website Hosting</a></li>
-                <li><a href="#">Free Automated Wordpress</a></li>
-                <li><a href="#">Migrations</a></li>
-              </ul>
-            </div>
-          </section>
-          <section class="collapsible footer__section">
-            <header class="collapsible__header">
-              <h2 class="collapsible__heading footer__heading">Company</h2>
-              <svg class="icon icon--white collapsible__chevron">
-                <use xlink:href="images/sprite.svg#chevron"></use>
-              </svg>
-            </header>
-            <div class="collapsible__content">
-              <ul class="list">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Affiliates</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </div>
-          </section>
-          <section class="collapsible footer__section">
-            <header class="collapsible__header">
-              <h2 class="collapsible__heading footer__heading">Support</h2>
-              <svg class="icon icon--white collapsible__chevron">
-                <use xlink:href="images/sprite.svg#chevron"></use>
-              </svg>
-            </header>
-            <div class="collapsible__content">
-              <ul class="list">
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Knowledge Base</a></li>
-                <li><a href="#">FAQ</a></li>
-              </ul>
-            </div>
-          </section>
+  <p class="w3-center w3-section" style="padding-top: 30px;">Follow me on</p>
+  <div class="w3-xlarge w3-center w3-section">
+    <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/mesfin.gedlu.33/"
+      target="_blank"></a>
+    <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/mesfin_gedlu/" target="_blank"></a>
 
-          <section class="footer__brand">
-            <img class="heart_logo" src="{% static 'image/logo1.png' %}" alt="" />
-            <p class="footer__copyright">All rights reserved 2022 <br> Markos Amsalu</p>
+    <a class="fa fa-twitter w3-hover-opacity" href="https://twitter.com/MGedlu" target="_blank"></a>
+    <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/mesfin1023ab/" target="_blank"></a>
+  </div>
+</footer>
 
-          </section>
-        </div>
-      </footer>
-    </body>
-    <div class="contact">
+<script>
 
-    </div>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+
+
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+  }
+  function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  function mmyFunction() {
+    var x = document.getElementById("DDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
   </footer>
   <script src="{% static 'main.js' %}"></script>
 </body>
